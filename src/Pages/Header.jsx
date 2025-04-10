@@ -11,9 +11,9 @@ function Header(){
                         <input type="text" name="" id="" placeholder='Search' />
                     </div>
                     <div className='profile'>
-                        <img src="/bell.png" alt="" />
-                        <img src="/Question 1.png" alt="" />
-                        <img src="/Avatar (1).png" alt="" />
+                        <img src="/bell.png" alt="" id="bell" />
+                        <img src="/Question 1.png" alt="" id="bell"/>
+                        <img src="/Avatar (1).png" alt="" id="bell"/>
                     </div>
                 </div>
         </>
