@@ -40,7 +40,7 @@ const Overview = () => {
   return (
     <div className="px-7 pt-7">
       <Title icon={MdDashboard} title="Overview" />
-      {/* <div className="flex justify-between gap-4">
+      <div className="flex justify-between gap-4">
         {(duLieu || []).map((muc) => (
           <OverviewItem
             key={muc.id}
@@ -50,7 +50,7 @@ const Overview = () => {
             thayDoi={muc.change}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };
