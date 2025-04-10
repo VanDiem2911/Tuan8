@@ -19,7 +19,10 @@ export default function DetailedReport() {
 
     useEffect(() => {
         axios.get("https://67f5260e913986b16fa3738f.mockapi.io/customer")
-            .then((res) => setData(res.data))
+            .then((res) => {
+                console.log("Fetched customer data:", res.data); 
+                setData(res.data);
+            })
             .catch((err) => console.error("Error loading data:", err));
     }, []);
 
