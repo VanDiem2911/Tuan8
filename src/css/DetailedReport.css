@@ -1,0 +1,47 @@
+.tableData{
+    width: 100%;
+    height: 58.3%;
+    border-style: solid ;
+    border-color: green;
+  }
+
+.detail{
+    height: 15%;
+    align-items: center;
+    margin-left: 20px;
+    display: flex;
+  }
+  .detailReport{
+    margin-right: 800px;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font:bold;
+  }
+  .import{
+    display: flex;
+    align-items: center;
+    color: pink;
+    border-style:solid  ;
+    border-color: pink;
+    border-radius: 10px;
+    font-size: 14px;
+    font:bold;
+    margin-right: 20px;
+    height: 35px;
+  }
+  img{
+    width: 30px;
+    margin-right: 15px;
+  }
+  th, td {
+    text-align: left;
+    padding: 20px;
+  }
+  #inp1{
+    width: 20px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }

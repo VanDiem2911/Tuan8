@@ -1,0 +1,21 @@
+.header{
+    width: 100%;
+    height: 10%;
+    border-style: solid ;
+    border-color: blue;
+    display: flex;
+    align-items: center;
+  } 
+.dashboard{
+  color: plum;
+  margin-right: 600px;
+  margin-left: 50px;
+}
+input{
+  width: 250px;
+}
+.profile{
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}

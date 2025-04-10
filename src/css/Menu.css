@@ -1,0 +1,42 @@
+
+.root{
+    height: 100%;
+    width: 20%;
+    border-style: solid;
+  }
+  .logo{
+    height: 10%;
+    width: 100%;
+    align-items: center;
+  }
+  #logo{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 25%;
+    height: 40%;
+  }
+  .menu{
+    width: 100%;
+    height: 40%;
+  }
+  .menuItems{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #000;
+    height: 15%;
+    border-radius: 10px;
+    width: 95%;
+  }
+  #menuLogo{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+  }
+  .menuItems:hover {
+    color: whitesmoke;
+    background-color: hotpink;
+  }
+  a{
+    text-decoration: none;
+  }
