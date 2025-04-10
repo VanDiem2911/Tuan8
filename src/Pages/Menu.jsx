@@ -1,52 +1,52 @@
-import "../css/Menu.css"
+import { NavLink } from "react-router-dom";
+import { Home, Folder, Users, BarChart2, MessageSquare, Settings } from "lucide-react";
+const navItems = [
+  { icon: <Home size={20} />, label: "Dashboard", path: "/" },
+  { icon: <Folder size={20} />, label: "Projects", path: "/projects" },
+  { icon: <Users size={20} />, label: "Teams", path: "/teams" },
+  { icon: <BarChart2 size={20} />, label: "Analytics", path: "/analytics" },
+  { icon: <MessageSquare size={20} />, label: "Messages", path: "/messages" },
+  { icon: <Settings size={20} />, label: "Integrations", path: "/integrations" },
+];
 
-function Menu() {
-    return (
-        <>
-            <div className='root'>
-                <div className='logo'>
-                    <img src="/Image 1858.png" alt="" id='logo' />
-                </div>
-                <div className='menu'>
-                    <a href="">
-                        <div className='menuItems'>
-                            <img src="/Squares four 1.png" alt="" id='menuLogo' />
-                            <p>Dashboard</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div className='menuItems'>
-                            <img src="/Folder.png" alt="" id='menuLogo' />
-                            <p>Projects</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div className='menuItems'>
-                            <img src="/Groups.png" alt="" id='menuLogo' />
-                            <p>Teams</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div className='menuItems'>
-                            <img src="/Pie chart.png" alt="" id='menuLogo' />
-                            <p>Analytics</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div className='menuItems'>
-                            <img src="/Chat.png" alt="" id='menuLogo' />
-                            <p>Messenger</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div className='menuItems'>
-                            <img src="/Code.png" alt="" id='menuLogo' />
-                            <p>Integrations</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </>
-    );
+export default function Sidebar() {
+  return (
+    <aside className="bg-white border-r p-4 flex flex-col justify-between">
+      <div>
+        <div className="text-2xl font-bold text-pink-500 mb-8">
+          <img
+            src="./Image 1858.png"
+            alt="Logo"
+            className="w-32 h-auto object-contain"
+          />
+        </div>
+        <ul className="space-y-2">
+          {navItems.map((item, idx) => (
+            <li key={idx}>
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  `flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors
+                   ${isActive ? "bg-pink-100 text-pink-600 font-semibold" : "text-gray-600 hover:bg-pink-50"}`
+                }
+              >
+                {item.icon}
+                <span>{item.label}</span>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="text-sm text-gray-500">
+        <div className="mb-2 bg-blue-50 p-4 rounded-xl flex flex-col items-center text-center">
+          <img src="./Group.png" alt="Version" />
+          <p className="font-bold text-gray-950 text-center">V2.0 is available</p>
+          <button className="mt-2 px-4 py-1 text-blue-600 border border-blue-400 rounded-md text-sm hover:bg-blue-100 transition items-center">
+            Try now
+          </button>
+        </div>
+      </div>
+    </aside>
+  );
 }
-export default Menu;
