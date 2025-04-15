@@ -49,10 +49,8 @@ export default function AddModal({ isOpen, onClose, onSave }) {
             />
 
 
-            <div
-                className={`fixed left-1/2 top-0 transform -translate-x-1/2 z-50 transition-all duration-300 ease-in-out ${isOpen ? 'translate-y-1/2 opacity-100' : '-translate-y-full opacity-0'
-                    } bg-white shadow-lg p-6 w-[90%] sm:w-[420px] rounded-xl`}
-            >
+            <div class="fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 transition-all duration-300 ease-in-out opacity-100 bg-white shadow-lg p-6 w-[90%] sm:w-[420px] rounded-xl">
+
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-xl font-semibold text-gray-800">Add New Customer</h2>
                     <button onClick={onClose}>
