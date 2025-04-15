@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện Web</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .buttons {
+        margin: 20px 0;
+    }
+
+    button {
+        margin: 0 10px;
+        padding: 15px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .slider {
+        margin-top: 20px; /* Đã sửa ở đây */
+    }
+
+    input[type="range"] {
+        width: 300px;
+        margin-right: 40px;
+    }
+    input[type="range"].vertical-slider {
+        -webkit-appearance: slider-vertical;
+        width: 20px;
+        height: 150px;
+        padding: 0 5px;
+    }
+
+    .bt_space{
+        margin-bottom: 30px;
+    }
+    .control{
+        display: flex;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Giao Diện Điều Khiển</h1>
+        <p id="connection-status">Đang kết nối...</p>
+        <div class="control">
+            <div class="slider">
+                <input type="range" id="range" min="0" max="100" value="50" class="vertical-slider">
+            </div>
+            <div class="buttons">
+                <div class="bt_space">
+                    <button id="up">Tiến</button>   
+                </div>
+                <div class="bt_space">
+                    <button id="left">Trái</button>
+                    <button id="right">Phải</button>
+                </div>
+                <div class="bt_space">
+                    <button id="down">Lùi</button>
+                </div>             
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
